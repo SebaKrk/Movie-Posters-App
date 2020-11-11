@@ -77,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				93DE7029255C9230000FDF71 /* Main.storyboard */,
-				93DE703F255C92AE000FDF71 /* PostersViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,6 +84,7 @@
 		93DE703C255C9269000FDF71 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				93DE703F255C92AE000FDF71 /* PostersViewController.swift */,
 				93DE7027255C9230000FDF71 /* ViewController.swift */,
 			);
 			path = Controller;
