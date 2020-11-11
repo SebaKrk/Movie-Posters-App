@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="290-tZ-Yzm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -8,20 +8,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie Posters App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movie_Posters_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="764-Pg-J36">
+                                <rect key="frame" x="30" y="365" width="354" height="34"/>
+                                <color key="backgroundColor" red="0.14258685709999999" green="0.22222816940000001" blue="0.30589547750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.86264139409999996" green="0.86281061169999995" blue="0.86264020200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWU-5s-F7x">
+                                <rect key="frame" x="120" y="428" width="174" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cml-Gy-nea"/>
+                                </constraints>
+                                <state key="normal" title="SEARCH" backgroundImage="Rectangle">
+                                    <color key="titleColor" red="0.86264139409999996" green="0.86281061169999995" blue="0.86264020200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="PWU-5s-F7x" firstAttribute="top" secondItem="764-Pg-J36" secondAttribute="bottom" constant="29" id="5Rr-BX-vax"/>
+                            <constraint firstItem="PWU-5s-F7x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BtG-tb-qwZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PWU-5s-F7x" secondAttribute="trailing" constant="120" id="Dk7-PT-spX"/>
+                            <constraint firstItem="PWU-5s-F7x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S9U-ds-GNa"/>
+                            <constraint firstItem="764-Pg-J36" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Vrb-vQ-R7w"/>
+                            <constraint firstItem="PWU-5s-F7x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="ZxQ-1I-BuF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="764-Pg-J36" secondAttribute="trailing" constant="30" id="w6E-FI-y49"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Movie Posters App" id="DFq-dF-9gn"/>
+                    <connections>
+                        <segue destination="rJO-rC-8az" kind="show" id="bVX-gD-lMm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-177" y="80"/>
+            <point key="canvasLocation" x="594.20289855072474" y="79.6875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9MH-dc-nob">
@@ -33,13 +64,37 @@
                         <viewLayoutGuide key="safeArea" id="FGl-Z1-vbB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gWs-wz-0sV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTZ-Ok-OV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="80"/>
+            <point key="canvasLocation" x="1677" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8va-Lk-S0j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="290-tZ-Yzm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="11l-Vt-YcC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14258685709999999" green="0.22222816940000001" blue="0.30589547750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hta-Lf-qgi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1Y-ue-NMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317.39130434782612" y="79.6875"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Rectangle" width="322" height="68"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
