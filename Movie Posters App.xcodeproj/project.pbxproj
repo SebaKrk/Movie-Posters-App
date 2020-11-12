@@ -11,6 +11,7 @@
 		93939B64255D395B00AB83F5 /* PostersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939B63255D395B00AB83F5 /* PostersManager.swift */; };
 		93939B6C255D4A2C00AB83F5 /* PostersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939B6B255D4A2C00AB83F5 /* PostersData.swift */; };
 		93939B71255D518F00AB83F5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93939B70255D518F00AB83F5 /* Kingfisher */; };
+		93939B74255DB0BD00AB83F5 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939B73255DB0BD00AB83F5 /* MovieDetailsViewController.swift */; };
 		93DE7024255C9230000FDF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE7023255C9230000FDF71 /* AppDelegate.swift */; };
 		93DE7026255C9230000FDF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE7025255C9230000FDF71 /* SceneDelegate.swift */; };
 		93DE7028255C9230000FDF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE7027255C9230000FDF71 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		93939B60255D36B200AB83F5 /* PostersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersModel.swift; sourceTree = "<group>"; };
 		93939B63255D395B00AB83F5 /* PostersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersManager.swift; sourceTree = "<group>"; };
 		93939B6B255D4A2C00AB83F5 /* PostersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersData.swift; sourceTree = "<group>"; };
+		93939B73255DB0BD00AB83F5 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		93DE7020255C9230000FDF71 /* Movie Posters App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Posters App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DE7023255C9230000FDF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DE7025255C9230000FDF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		93DE703C255C9269000FDF71 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				93939B73255DB0BD00AB83F5 /* MovieDetailsViewController.swift */,
 				93DE703F255C92AE000FDF71 /* PostersViewController.swift */,
 				93DE7027255C9230000FDF71 /* ViewController.swift */,
 			);
@@ -186,6 +189,7 @@
 			files = (
 				93939B61255D36B200AB83F5 /* PostersModel.swift in Sources */,
 				93DE7040255C92AE000FDF71 /* PostersViewController.swift in Sources */,
+				93939B74255DB0BD00AB83F5 /* MovieDetailsViewController.swift in Sources */,
 				93DE7028255C9230000FDF71 /* ViewController.swift in Sources */,
 				93DE702E255C9230000FDF71 /* Movie_Posters_App.xcdatamodeld in Sources */,
 				93939B64255D395B00AB83F5 /* PostersManager.swift in Sources */,

@@ -21,6 +21,7 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
         
         postersManager.delegate = self
         postersManager.getJSON()
+        
 
             
     }
@@ -28,6 +29,8 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
     
     @IBAction func moreInfoButtonTapped(_ sender: Any) {
         
+        performSegue(withIdentifier: "movieDetailsSegue", sender: Any.self)
+
     }
     
     @IBAction func ratingsButtonTapped(_ sender: Any) {
@@ -45,5 +48,5 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
         }
     }
 
-
+    
 }
