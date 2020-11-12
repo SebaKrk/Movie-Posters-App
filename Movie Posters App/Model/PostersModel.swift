@@ -11,4 +11,12 @@ struct PostersModel {
     var title : String
     var poster : String
     var plot : String
+    
+    var Released: String
+    var Runtime: String
+    var Genre: String
+    var Director: String
+    var Writer: String
+    var Awards: String
+    var Actors: String
 }

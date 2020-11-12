@@ -54,10 +54,16 @@ struct PostersManager {
             let title = decodedData.Title
             let posterImage = decodedData.Poster
             let plot = decodedData.Plot
+            let released = decodedData.Released
+            let runtime = decodedData.Runtime
+            let genre = decodedData.Genre
+            let director = decodedData.Director
+            let writer = decodedData.Writer
+            let awards = decodedData.Awards
+            let actors = decodedData.Actors
             
-            print(title)
             
-            let posterModel = PostersModel(title: title, poster: posterImage, plot: plot)
+            let posterModel = PostersModel(title: title, poster: posterImage, plot: plot, Released: released, Runtime: runtime, Genre: genre, Director: director, Writer: writer, Awards: awards, Actors: actors)
         
             
             return posterModel

@@ -11,4 +11,11 @@ class PostersData:Codable {
     var Title : String
     var Poster : String
     var Plot: String
+    var Released: String
+    var Runtime: String
+    var Genre: String
+    var Director: String
+    var Writer: String
+    var Awards: String
+    var Actors: String
 }
