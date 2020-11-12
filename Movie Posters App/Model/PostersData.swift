@@ -18,4 +18,5 @@ class PostersData:Codable {
     var Writer: String
     var Awards: String
     var Actors: String
+    var Year: String
 }

@@ -12,11 +12,12 @@ struct PostersModel {
     var poster : String
     var plot : String
     
-    var Released: String
-    var Runtime: String
-    var Genre: String
-    var Director: String
-    var Writer: String
-    var Awards: String
-    var Actors: String
+    var released: String
+    var runtime: String
+    var genre: String
+    var director: String
+    var writer: String
+    var awards: String
+    var actors: String
+    var year: String
 }
