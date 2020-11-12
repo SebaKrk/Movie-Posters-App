@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class PostersManagerDelegate: UIViewController,PostersManagerDelegate {
+class PostersViewController: UIViewController,PostersManagerDelegate {
    
     var postersManager = PostersManager()
 
@@ -36,7 +37,11 @@ class PostersManagerDelegate: UIViewController,PostersManagerDelegate {
     func didIpdatePosters(posters: PostersModel) {
         DispatchQueue.main.async {
             self.titleLabel.text = posters.title
-            print(posters.poster)
+            
+            let url = URL(string: "\(posters.poster)")
+            
+            self.posterImage.kf.setImage(with: url)
+            
         }
     }
 
