@@ -10,6 +10,8 @@ import UIKit
 class PostersViewController: UIViewController {
 
     @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
