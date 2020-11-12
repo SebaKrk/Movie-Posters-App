@@ -7,7 +7,9 @@
 
 import UIKit
 
-class PostersViewController: UIViewController {
+class PostersManagerDelegate: UIViewController,PostersManagerDelegate {
+   
+    var postersManager = PostersManager()
 
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -15,9 +17,13 @@ class PostersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        postersManager.delegate = self
+        postersManager.getJSON()
 
-        // Do any additional setup after loading the view.
+            
     }
+    
     
     @IBAction func moreInfoButtonTapped(_ sender: Any) {
         
@@ -27,6 +33,12 @@ class PostersViewController: UIViewController {
         
     }
     
+    func didIpdatePosters(posters: PostersModel) {
+        DispatchQueue.main.async {
+            self.titleLabel.text = posters.title
+            print(posters.poster)
+        }
+    }
 
 
 }

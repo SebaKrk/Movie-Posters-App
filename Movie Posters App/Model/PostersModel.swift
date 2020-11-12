@@ -9,5 +9,5 @@ import Foundation
 
 struct PostersModel {
     var title : String
-//    var poster : String
+    var poster : String
 }

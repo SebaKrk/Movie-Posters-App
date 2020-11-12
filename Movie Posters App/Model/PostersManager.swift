@@ -52,10 +52,12 @@ struct PostersManager {
             let decodedData = try decoder.decode(PostersData.self, from: appData)
             
             let title = decodedData.Title
+            let posterImage = decodedData.Poster
             
             print(title)
             
-            let posterModel = PostersModel(title: title)
+            let posterModel = PostersModel(title: title, poster: posterImage)
+        
             
             return posterModel
             

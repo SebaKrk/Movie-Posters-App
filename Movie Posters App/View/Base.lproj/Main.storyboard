@@ -76,10 +76,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-lu-CyP">
-                                <rect key="frame" x="0.0" y="173" width="414" height="466"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="466"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zL-Xa-TCF">
-                                <rect key="frame" x="120" y="673" width="174" height="40"/>
+                                <rect key="frame" x="120" y="639" width="174" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="pNU-PJ-DVf"/>
                                 </constraints>
@@ -88,14 +88,14 @@
                                     <action selector="moreInfoButtonTapped:" destination="rJO-rC-8az" eventType="touchUpInside" id="SoQ-Yo-NGq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars: Episode IV - A New Hopev" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGY-1g-r9H">
-                                <rect key="frame" x="0.0" y="98" width="414" height="67.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars: Episode IV " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGY-1g-r9H">
+                                <rect key="frame" x="0.0" y="98" width="414" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL3-74-GSb">
-                                <rect key="frame" x="120" y="748" width="174" height="40"/>
+                                <rect key="frame" x="120" y="714" width="174" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bWq-WL-JvP"/>
                                 </constraints>
