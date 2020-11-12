@@ -60,14 +60,14 @@
                     <connections>
                         <outlet property="emojiLabel" destination="ikl-kw-HBW" id="TgB-yR-gpj"/>
                         <outlet property="searchTextField" destination="764-Pg-J36" id="Q2q-Yn-Sd0"/>
-                        <segue destination="rJO-rC-8az" kind="show" id="bVX-gD-lMm"/>
+                        <segue destination="rJO-rC-8az" kind="show" identifier="postersSegue" id="bVX-gD-lMm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="594.20289855072474" y="79.6875"/>
         </scene>
-        <!--Posters View Controller-->
+        <!--Movie Posters App-->
         <scene sceneID="9MH-dc-nob">
             <objects>
                 <viewController id="rJO-rC-8az" customClass="PostersViewController" customModule="Movie_Posters_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,6 +84,9 @@
                                     <constraint firstAttribute="height" constant="40" id="zkx-ev-Nxg"/>
                                 </constraints>
                                 <state key="normal" title="Ratings" backgroundImage="Rectangle"/>
+                                <connections>
+                                    <action selector="ratingsButtonTapped:" destination="rJO-rC-8az" eventType="touchUpInside" id="PNR-BJ-pkD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zL-Xa-TCF">
                                 <rect key="frame" x="120" y="682" width="174" height="40"/>
@@ -92,6 +95,9 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="iPJ-QG-OeM"/>
                                 </constraints>
                                 <state key="normal" title="More Information" backgroundImage="Rectangle"/>
+                                <connections>
+                                    <action selector="moreInfoButtonTapped:" destination="rJO-rC-8az" eventType="touchUpInside" id="SoQ-Yo-NGq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FGl-Z1-vbB"/>
@@ -109,7 +115,12 @@
                             <constraint firstItem="nw0-lu-CyP" firstAttribute="trailing" secondItem="FGl-Z1-vbB" secondAttribute="trailing" id="yHM-1C-DO5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gWs-wz-0sV"/>
+                    <navigationItem key="navigationItem" title="Movie Posters App" id="gWs-wz-0sV">
+                        <barButtonItem key="backBarButtonItem" title="back" id="gJ4-of-85e"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="posterImage" destination="nw0-lu-CyP" id="onr-4r-19o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTZ-Ok-OV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

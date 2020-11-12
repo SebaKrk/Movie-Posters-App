@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func searchButtonTapped(_ sender: Any) {
+       performSegue(withIdentifier: "postersSegue", sender: self)
         
     }
     
