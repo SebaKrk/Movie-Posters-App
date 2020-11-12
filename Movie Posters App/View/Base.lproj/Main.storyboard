@@ -142,14 +142,33 @@
                     <view key="view" contentMode="scaleToFill" id="Cdd-br-TAa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnN-r9-Tw8">
+                                <rect key="frame" x="20" y="108" width="374" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="LPJ-mO-Wfn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sXw-rb-YcA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sXw-rb-YcA" firstAttribute="trailing" secondItem="bnN-r9-Tw8" secondAttribute="trailing" constant="20" id="jls-CJ-mgj"/>
+                            <constraint firstItem="bnN-r9-Tw8" firstAttribute="top" secondItem="sXw-rb-YcA" secondAttribute="top" constant="20" id="uMi-hf-daa"/>
+                            <constraint firstItem="bnN-r9-Tw8" firstAttribute="leading" secondItem="sXw-rb-YcA" secondAttribute="leading" constant="20" id="umG-ZT-dh9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l4F-hU-fQa"/>
+                    <connections>
+                        <outlet property="plotLabel" destination="bnN-r9-Tw8" id="Afc-tK-Hex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmu-oj-9kL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2652" y="80"/>
+            <point key="canvasLocation" x="2650.7246376811595" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8va-Lk-S0j">
