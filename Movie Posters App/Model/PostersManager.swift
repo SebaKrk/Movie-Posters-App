@@ -53,10 +53,11 @@ struct PostersManager {
             
             let title = decodedData.Title
             let posterImage = decodedData.Poster
+            let plot = decodedData.Plot
             
             print(title)
             
-            let posterModel = PostersModel(title: title, poster: posterImage)
+            let posterModel = PostersModel(title: title, poster: posterImage, plot: plot)
         
             
             return posterModel

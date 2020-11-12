@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MovieDetailsViewController: UIViewController {
+class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
+   
+    
     
     
     @IBOutlet weak var plotLabel: UILabel!
@@ -17,12 +19,23 @@ class MovieDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        posterManager.delegate = self
+        posterManager.getJSON()
+        
         view.backgroundColor = .black
         plotLabel.textColor = .white
+        plotLabel.adjustsFontSizeToFitWidth = true
         plotLabel.numberOfLines = 0
-        plotLabel.text = "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader."
+        plotLabel.text = "Luke Skywalker"
         
 
+    }
+    
+    func didIpdatePosters(posters: PostersModel) {
+        DispatchQueue.main.async {
+            self.plotLabel.text = "About Movie: \(posters.plot)"
+        }
+        
     }
     
 

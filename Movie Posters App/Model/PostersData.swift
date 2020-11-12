@@ -10,4 +10,5 @@ import Foundation
 class PostersData:Codable {
     var Title : String
     var Poster : String
+    var Plot: String
 }
