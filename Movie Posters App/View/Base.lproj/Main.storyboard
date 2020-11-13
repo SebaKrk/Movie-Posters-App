@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="290-tZ-Yzm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="290-tZ-Yzm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -129,7 +129,7 @@
                         <outlet property="posterImage" destination="nw0-lu-CyP" id="onr-4r-19o"/>
                         <outlet property="titleLabel" destination="oGY-1g-r9H" id="sga-Nr-TpB"/>
                         <segue destination="yfm-nO-oBF" kind="show" identifier="movieDetailsSegue" id="uvf-SE-QIu"/>
-                        <segue destination="ONP-Ja-hCg" kind="show" identifier="ratingsSegue" id="Rd1-KH-qDY"/>
+                        <segue destination="fWX-cW-Nvd" kind="show" identifier="ratingsSegue" id="IpU-pm-Px4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTZ-Ok-OV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -271,21 +271,34 @@
             </objects>
             <point key="canvasLocation" x="2571" y="-1"/>
         </scene>
-        <!--Ratings View Controller-->
-        <scene sceneID="xzV-cn-9r4">
+        <!--Ratings Table View Controller-->
+        <scene sceneID="ocy-Aa-dBB">
             <objects>
-                <viewController id="ONP-Ja-hCg" customClass="RatingsViewController" customModule="Movie_Posters_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h8H-DO-3IJ">
+                <tableViewController id="fWX-cW-Nvd" customClass="RatingsTableViewController" customModule="Movie_Posters_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2dw-5U-BNA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="3AM-2d-Edp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="mpR-9L-hPw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hAe-nU-Afg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kHN-Kf-WcR">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kHN-Kf-WcR" id="Bb8-Ad-UOS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fWX-cW-Nvd" id="gX3-ap-vsw"/>
+                            <outlet property="delegate" destination="fWX-cW-Nvd" id="GUj-2f-LzP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Cb9-FO-yLw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSN-Kc-myr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2558" y="635"/>
+            <point key="canvasLocation" x="2549" y="634"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8va-Lk-S0j">
