@@ -129,6 +129,7 @@
                         <outlet property="posterImage" destination="nw0-lu-CyP" id="onr-4r-19o"/>
                         <outlet property="titleLabel" destination="oGY-1g-r9H" id="sga-Nr-TpB"/>
                         <segue destination="yfm-nO-oBF" kind="show" identifier="movieDetailsSegue" id="uvf-SE-QIu"/>
+                        <segue destination="ONP-Ja-hCg" kind="show" identifier="ratingsSegue" id="Rd1-KH-qDY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTZ-Ok-OV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -268,7 +269,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmu-oj-9kL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2650.7246376811595" y="79.6875"/>
+            <point key="canvasLocation" x="2571" y="-1"/>
+        </scene>
+        <!--Ratings View Controller-->
+        <scene sceneID="xzV-cn-9r4">
+            <objects>
+                <viewController id="ONP-Ja-hCg" customClass="RatingsViewController" customModule="Movie_Posters_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8H-DO-3IJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3AM-2d-Edp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mpR-9L-hPw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAe-nU-Afg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2558" y="635"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8va-Lk-S0j">
