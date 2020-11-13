@@ -42,6 +42,8 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
     
     @IBAction func ratingsButtonTapped(_ sender: Any) {
         
+        performSegue(withIdentifier: "ratingsSegue", sender: Any.self)
+        
     }
     
     func didIpdatePosters(posters: PostersModel) {
