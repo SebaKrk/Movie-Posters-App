@@ -12,7 +12,8 @@ class RatingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .black
+        
+        tableView.backgroundColor = .lightGray
         
        
     }
@@ -34,6 +35,7 @@ class RatingsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        
 
         return cell
     }
