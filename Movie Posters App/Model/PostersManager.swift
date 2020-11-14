@@ -11,13 +11,17 @@ protocol PostersManagerDelegate {
     func didIpdatePosters (posters: PostersModel)
 }
 
+//var movieToURL =
+
+var vieControler = ViewController()
+
 struct PostersManager {
     
     var delegate: PostersManagerDelegate?
     
     let baseURL = "https://www.omdbapi.com/?t="
     let apiKey = "b68fdd8a"
-    let poster = "star+wars"
+    var poster = vieControler.searchTextField.text!
     
     func getJSON() {
         let urlString = "\(baseURL)\(poster)&apikey=\(apiKey)"

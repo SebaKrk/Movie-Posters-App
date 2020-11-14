@@ -32,6 +32,9 @@ class ViewController: UIViewController {
             
         }
     }
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var vc = segue.destination as? PostersManager
+        vc?.poster = searchTextField.text!
+    }
 }
 
