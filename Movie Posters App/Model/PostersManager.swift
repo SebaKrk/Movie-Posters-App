@@ -51,8 +51,8 @@ struct PostersManager {
         do {
             let decodedData = try decoder.decode(PostersData.self, from: appData)
             
-            print(decodedData.Ratings[0].Source)
-            print(decodedData.Ratings[0].Value)
+//            print(decodedData.Ratings[0].Source)
+//            print(decodedData.Ratings[0].Value)
             
             let title = decodedData.Title
             let posterImage = decodedData.Poster
