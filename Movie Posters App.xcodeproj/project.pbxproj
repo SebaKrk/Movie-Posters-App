@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93685436255F447D0088C16D /* RatingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93685435255F447D0088C16D /* RatingsTableViewController.swift */; };
+		9368544F256014920088C16D /* RatingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368544E256014920088C16D /* RatingsData.swift */; };
 		93939B61255D36B200AB83F5 /* PostersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939B60255D36B200AB83F5 /* PostersModel.swift */; };
 		93939B64255D395B00AB83F5 /* PostersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939B63255D395B00AB83F5 /* PostersManager.swift */; };
 		93939B6C255D4A2C00AB83F5 /* PostersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939B6B255D4A2C00AB83F5 /* PostersData.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		93685435255F447D0088C16D /* RatingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsTableViewController.swift; sourceTree = "<group>"; };
+		9368544E256014920088C16D /* RatingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsData.swift; sourceTree = "<group>"; };
 		93939B60255D36B200AB83F5 /* PostersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersModel.swift; sourceTree = "<group>"; };
 		93939B63255D395B00AB83F5 /* PostersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersManager.swift; sourceTree = "<group>"; };
 		93939B6B255D4A2C00AB83F5 /* PostersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostersData.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				93939B63255D395B00AB83F5 /* PostersManager.swift */,
 				93939B6B255D4A2C00AB83F5 /* PostersData.swift */,
 				93939B60255D36B200AB83F5 /* PostersModel.swift */,
+				9368544E256014920088C16D /* RatingsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				93DE702E255C9230000FDF71 /* Movie_Posters_App.xcdatamodeld in Sources */,
 				93939B64255D395B00AB83F5 /* PostersManager.swift in Sources */,
 				93DE7024255C9230000FDF71 /* AppDelegate.swift in Sources */,
+				9368544F256014920088C16D /* RatingsData.swift in Sources */,
 				93939B6C255D4A2C00AB83F5 /* PostersData.swift in Sources */,
 				93685436255F447D0088C16D /* RatingsTableViewController.swift in Sources */,
 				93DE7026255C9230000FDF71 /* SceneDelegate.swift in Sources */,

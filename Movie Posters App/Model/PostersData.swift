@@ -19,11 +19,6 @@ class PostersData:Codable {
     var Awards: String
     var Actors: String
     var Year: String
-    var Ratings: [Ratings]
 }
 
-class Ratings: Codable {
-    var Source: String
-    var Value: String
-}
 //Ratings[0].Source
