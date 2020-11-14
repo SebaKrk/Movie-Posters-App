@@ -18,18 +18,20 @@ class ViewController: UIViewController {
         
         searchTextField.attributedPlaceholder = NSAttributedString(string: "Please enter title of movie", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
     }
-
-    @IBAction func searchButtonTapped(_ sender: Any) {
-       performSegue(withIdentifier: "postersSegue", sender: self)
-        
-    }
+    
     
     // MARK: - Search Field
     
-    let text = searchTextField.text
-    let movie = text.replacingOccurrences(of: " ", with: "%20")
-        
-        
+    @IBAction func searchButtonTapped(_ sender: Any) {
+        if let movieSearch = searchTextField.text {
+            let movie = movieSearch.replacingOccurrences(of: " ", with: "%20")
+            print(movieSearch)
+            print(movie)
+            
+            performSegue(withIdentifier: "postersSegue", sender: self)
+            
+        }
     }
+   
 }
 
