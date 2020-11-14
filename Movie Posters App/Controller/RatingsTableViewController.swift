@@ -9,15 +9,19 @@ import UIKit
 
 class RatingsTableViewController: UITableViewController {
     
-    var arrayRatings : [RatingsData] = []
-
+    
+    
+        var arrayRatings = [String]()
+    //    var arrayRatings = RatingsData(from: <#Decoder#>)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getJSON()
         
         tableView.backgroundColor = .lightGray
         
-       
+        
     }
     
     // MARK: - get JASON Data
@@ -39,9 +43,11 @@ class RatingsTableViewController: UITableViewController {
                 if let safeData = data {
                     let decoder = JSONDecoder()
                     do {
-                        let ratingsData = try decoder.decode([RatingsData].self, from: safeData)
+                        let ratingsData = try decoder.decode(RatingsData.self, from: safeData)
                         DispatchQueue.main.async {
-                            self.arrayRatings = ratingsData
+                            print(ratingsData.Ratings[0].Source)
+                            self.arrayRatings.append(ratingsData.Ratings[0].Source)
+//                                = ratingsData.Ratings[0].Source
                             self.tableView.reloadData()
                         }
                     } catch {
@@ -55,27 +61,30 @@ class RatingsTableViewController: UITableViewController {
     }
     
     
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return arrayRatings.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
         
-
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+     
+        let cell = UITableViewCell()
+        cell.textLabel?.text = arrayRatings[indexPath.row]
+ 
+        
+        
         return cell
     }
-
+    
 }
