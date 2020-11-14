@@ -81,8 +81,6 @@ class RatingsTableViewController: UITableViewController {
      
         let cell = UITableViewCell()
         cell.textLabel?.text = arrayRatings[indexPath.row]
- 
-        
         
         return cell
     }
