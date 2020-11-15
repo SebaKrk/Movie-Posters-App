@@ -8,16 +8,7 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
-    func didUpdateMovie(movie: String) {
-        DispatchQueue.main.async {
-            self.titleLabel.text = movie
-        }
-    }
-    
 
-    
-    
-    
     @IBOutlet weak var plotText: UILabel!
     @IBOutlet weak var plotLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -32,12 +23,14 @@ class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
     
     
     var posterManager = PostersManager()
+    
+    var setMore = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         posterManager.delegate = self
-        posterManager.getJSON(for: titleLabel.text!)
+        posterManager.getJSON(for: setMore)
         
         view.backgroundColor = .black
         plotLabel.textColor = .white
@@ -65,12 +58,14 @@ class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
         
         genreLabel.textColor = .white
         genreLabel.adjustsFontSizeToFitWidth = true
+        genreLabel.numberOfLines = 0
         
         directorLabel.textColor = .white
         directorLabel.adjustsFontSizeToFitWidth = true
         
         writerLabel.textColor = .white
         writerLabel.adjustsFontSizeToFitWidth = true
+        writerLabel.numberOfLines = 0
         
         awardsLabel.textColor = .white
         awardsLabel.adjustsFontSizeToFitWidth = true
@@ -79,6 +74,12 @@ class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
         actorsLabel.textColor = .white
         actorsLabel.adjustsFontSizeToFitWidth = true
         actorsLabel.numberOfLines = 0
+    }
+    
+    func didUpdateMovie(movie: String) {
+        DispatchQueue.main.async {
+            self.titleLabel.text = movie
+        }
     }
     
     
@@ -95,9 +96,6 @@ class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
             self.writerLabel.text = "Writer: \(posters.writer)"
             self.awardsLabel.text = "Awards: \(posters.awards)"
             self.actorsLabel.text = "Actors: \(posters.actors)"
-            
-            
-            
         }
         
     }

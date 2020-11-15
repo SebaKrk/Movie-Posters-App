@@ -12,7 +12,7 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
    
    
     var postersManager = PostersManager()
-    var viewController = ViewController()
+
     
     var setMovie = ""
 
@@ -22,18 +22,14 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("cos: \(setMovie)")
+
         
         postersManager.delegate = self
         
         titleLabel.text = setMovie
 
-        postersManager.getJSON(for: titleLabel.text!)
+        postersManager.getJSON(for: setMovie)
 
-        
-
-            
     }
     
     
@@ -42,12 +38,10 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
         performSegue(withIdentifier: "movieDetailsSegue", sender: Any.self)
 
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destinationVC = segue.destination as? MovieDetailsViewController {
-//            destinationVC.manager = postersManager
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! MovieDetailsViewController
+        vc.setMore = setMovie
+    }
     
     
     @IBAction func ratingsButtonTapped(_ sender: Any) {
@@ -71,7 +65,4 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
             self.titleLabel.text = movie
         }
     }
-    
-
-    
 }
