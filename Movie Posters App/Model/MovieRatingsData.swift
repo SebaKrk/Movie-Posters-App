@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct MovieRatingsData: Codable {
+    let Ratings: [Ratings]
+}
+struct Ratings: Codable {
+    let Source: String
+    let Value: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case Source, Value
+    }
+}
+
