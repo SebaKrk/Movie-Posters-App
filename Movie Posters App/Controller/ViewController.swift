@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
+    var movie = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
     
     @IBAction func searchButtonTapped(_ sender: Any) {
         if let movieSearch = searchTextField.text {
-            let movie = movieSearch.replacingOccurrences(of: " ", with: "%20")
+            movie = movieSearch.replacingOccurrences(of: " ", with: "%20")
             print(movieSearch)
             print(movie)
             
@@ -33,8 +35,11 @@ class ViewController: UIViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var vc = segue.destination as? PostersManager
-        vc?.poster = searchTextField.text!
+        let vc = segue.destination as! PostersViewController
+        vc.setMovie = movie
+        
+//        var vc = segue.destination as? PostersManager
+//        vc?.poster = searchTextField.text!
     }
 }
 

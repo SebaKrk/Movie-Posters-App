@@ -8,6 +8,12 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
+    func didUpdateMovie(movie: String) {
+        DispatchQueue.main.async {
+            self.titleLabel.text = movie
+        }
+    }
+    
 
     
     
@@ -31,7 +37,7 @@ class MovieDetailsViewController: UIViewController, PostersManagerDelegate {
         super.viewDidLoad()
         
         posterManager.delegate = self
-        posterManager.getJSON()
+        posterManager.getJSON(for: titleLabel.text!)
         
         view.backgroundColor = .black
         plotLabel.textColor = .white

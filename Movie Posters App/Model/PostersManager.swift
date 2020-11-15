@@ -9,11 +9,12 @@ import Foundation
 
 protocol PostersManagerDelegate {
     func didIpdatePosters (posters: PostersModel)
+    func didUpdateMovie(movie:String)
 }
 
 //var movieToURL =
 
-var vieControler = ViewController()
+var vieControler = ViewController() 
 
 struct PostersManager {
     
@@ -21,10 +22,10 @@ struct PostersManager {
     
     let baseURL = "https://www.omdbapi.com/?t="
     let apiKey = "b68fdd8a"
-    var poster = vieControler.searchTextField.text!
+//    let poster = "star+wars"
     
-    func getJSON() {
-        let urlString = "\(baseURL)\(poster)&apikey=\(apiKey)"
+    func getJSON(for movie: String) {
+        let urlString = "\(baseURL)\(movie)&apikey=\(apiKey)"
         
         print(urlString)
     

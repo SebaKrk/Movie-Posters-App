@@ -10,7 +10,11 @@ import Kingfisher
 
 class PostersViewController: UIViewController,PostersManagerDelegate {
    
+   
     var postersManager = PostersManager()
+    var viewController = ViewController()
+    
+    var setMovie = ""
 
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -19,8 +23,14 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("cos: \(setMovie)")
+        
         postersManager.delegate = self
-        postersManager.getJSON()
+        
+        titleLabel.text = setMovie
+
+        postersManager.getJSON(for: titleLabel.text!)
+
         
 
             
@@ -56,6 +66,12 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
             
         }
     }
+    func didUpdateMovie(movie: String) {
+        DispatchQueue.main.async {
+            self.titleLabel.text = movie
+        }
+    }
+    
 
     
 }
