@@ -272,6 +272,37 @@
             </objects>
             <point key="canvasLocation" x="2571" y="-1"/>
         </scene>
+        <!--Movie Ratings Table View Controller-->
+        <scene sceneID="Vx0-kc-gha">
+            <objects>
+                <tableViewController id="jZ3-Ae-29h" customClass="MovieRatingsTableViewController" customModule="Movie_Posters_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YFY-HC-qHk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="jFn-cK-TAb">
+                                <rect key="frame" x="0.0" y="28" width="414" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jFn-cK-TAb" id="SEj-ad-gjl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jZ3-Ae-29h" id="eFU-hl-lw2"/>
+                            <outlet property="delegate" destination="jZ3-Ae-29h" id="AV8-5E-uVe"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="table" destination="YFY-HC-qHk" id="Szz-XR-wRo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36A-uo-Pmp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408.6956521739132" y="806.91964285714278"/>
+        </scene>
         <!--Ratings Table View Controller-->
         <scene sceneID="ocy-Aa-dBB">
             <objects>

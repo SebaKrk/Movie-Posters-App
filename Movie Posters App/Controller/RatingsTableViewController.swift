@@ -10,9 +10,11 @@ import UIKit
 class RatingsTableViewController: UITableViewController {
     
     
+    var posterManager = PostersManager()
     
-        var arrayRatings = [String]()
-    //    var arrayRatings = RatingsData(from: <#Decoder#>)
+    var arrayRatings = [String]()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class RatingsTableViewController: UITableViewController {
                         DispatchQueue.main.async {
                             print(ratingsData.Ratings[0].Source)
                             self.arrayRatings.append(ratingsData.Ratings[0].Source)
-//                                = ratingsData.Ratings[0].Source
+                            //                                = ratingsData.Ratings[0].Source
                             self.tableView.reloadData()
                         }
                     } catch {
@@ -77,8 +79,8 @@ class RatingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
         let cell = UITableViewCell()
         cell.textLabel?.text = arrayRatings[indexPath.row]
         

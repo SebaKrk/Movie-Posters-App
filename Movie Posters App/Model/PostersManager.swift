@@ -12,7 +12,7 @@ protocol PostersManagerDelegate {
     func didUpdateMovie(movie:String)
 }
 
-//var movieToURL =
+
 
 var vieControler = ViewController() 
 
@@ -22,7 +22,7 @@ struct PostersManager {
     
     let baseURL = "https://www.omdbapi.com/?t="
     let apiKey = "b68fdd8a"
-//    let poster = "star+wars"
+
     
     func getJSON(for movie: String) {
         let urlString = "\(baseURL)\(movie)&apikey=\(apiKey)"
