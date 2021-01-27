@@ -45,8 +45,8 @@ class PostersViewController: UIViewController,PostersManagerDelegate {
     
     
     @IBAction func ratingsButtonTapped(_ sender: Any) {
-        
-        performSegue(withIdentifier: "ratingsSegue", sender: Any.self)
+        print("ratingsButtonTapped")
+//        performSegue(withIdentifier: "ratingsSegue", sender: Any.self)
         
     }
     

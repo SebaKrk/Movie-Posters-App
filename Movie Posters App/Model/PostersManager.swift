@@ -14,7 +14,7 @@ protocol PostersManagerDelegate {
 
 
 
-var vieControler = ViewController() 
+//var vieControler = ViewController() 
 
 struct PostersManager {
     

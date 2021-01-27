@@ -35,7 +35,7 @@ class RatingsTableViewController: UITableViewController {
     func getJSON() {
         
         let urlString = "\(baseURL)\(poster)&apikey=\(apiKey)"
-        
+        print(urlString)
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in

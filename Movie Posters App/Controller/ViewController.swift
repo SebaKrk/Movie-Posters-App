@@ -38,8 +38,6 @@ class ViewController: UIViewController {
         let vc = segue.destination as! PostersViewController
         vc.setMovie = movie
         
-//        var vc = segue.destination as? PostersManager
-//        vc?.poster = searchTextField.text!
     }
 }
 
